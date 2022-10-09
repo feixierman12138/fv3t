@@ -1,0 +1,38 @@
+# define job variables at job level
+variables:
+  #用户自定义变量
+  #开发测试k8s集群名称，参考https://git.healthlink.cn/devops/appstore定义
+  HAAS_DEPLOY_K8S: 'haas-dev-test'
+  #生产集群名称，参考https://git.healthlink.cn/devops/appstore定义
+  HAAS_PROD_K8S: 'haas-ph-prod'
+  #域名前缀，比如：adls.healthlink.cn
+  HAAS_DEPLOY_DOMAIN_PREFIX: 'hsp-wx'
+  #域名后缀，同上
+  HAAS_DEPLOY_DOMAIN_SUFFIX: 'healthlinkzk.cn'
+  #gitlab的group名称
+  HAAS_APP_GROUP: 'healthfuture'
+  #应用类型：后端java，前端web
+  HAAS_APP_TYPE: 'web'
+  #访问端口
+  HAAS_APP_PORT: 80
+  #ingress路由配置，多个路由用英文逗号','分隔，如：/api,/api2
+  PATH_PREFIX: '/'
+  #（选填）prometheus访问前缀，没有则留空字符串即可，多个路由用英文逗号','分隔，如：/auth/actuator,/actuator
+  PROM_PREFIX: ''
+  #（生产必填）最小运行容器的副本数（只对生产和pre环境有效，开发测试环境无效）
+  REPLICAS_COUNT: 1
+  #（按规则必填）最大运行容器的副本数：配置成 “REPLICAS_COUNT + 2” 即可。规则：MAX_REPLICAS_COUNT>=REPLICAS_COUNT+2
+  MAX_REPLICAS_COUNT: 3
+  #（生产必填）生产集群的namespace名称
+  PROD_NAME: 'hsp-prod'
+  #(new)skywalking的访问地址，不需要加http前缀
+  #开发测试集群：skywalking-oap.skywalking
+  #生产集群：(待定)留空字符串即可
+  SW_BACKEND_SVC: ""
+# --------------------------------------------------------
+include:
+  - project: 'devops/gitlab-ci'
+    ref: master
+    file: 'node/.gitlab-ci.yml'
+# --------------------------------------------------------
+

@@ -1,0 +1,95 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dd,
+p,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: #fff;
+}
+body,
+select {
+  font-family: '微软雅黑';
+  color: #000;
+  font-size: 3.2vw;
+  -webkit-text-size-adjust: none;
+  cursor: default;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:focus {
+  outline: none;
+}
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  line-height: 0px;
+}
+input,
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+* html .clearfix {
+  height: 1%;
+}
+
+* + html .clearfix {
+  zoom: 1;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+::placeholder {
+  color: #b5b5b5 !important;
+  opacity: 1;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}

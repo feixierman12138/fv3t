@@ -1,0 +1,32 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "项目名称",
+      "default": "fv3t-demo"
+    },
+    "version": {
+      "type": "string",
+      "required": true,
+      "message": "项目的版本号",
+      "default": "1.0.0"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "项目描述",
+      "default": "vue3+vite+ts"
+    },
+    "author": {
+      "type": "string",
+      "message": "开发者"
+    },
+    "usesass": {
+      "type": "confirm",
+      "message": "使用 pinia / vuex?",
+      "required": true
+    },
+    "completeMessage": ""
+  }
+}

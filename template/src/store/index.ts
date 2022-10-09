@@ -1,4 +1,4 @@
-{{#isEnabled plugins 'vuex'}}
+{{#if vuex}}
 import { createStore } from 'vuex'
 
 export default createStore({
@@ -12,4 +12,4 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('main', {
   
 })
-{{/isEnabled}}
+{{/if}}
